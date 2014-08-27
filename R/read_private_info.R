@@ -19,13 +19,13 @@
 # and the right column has the values (the actual password, gmail
 # account, and email address for sending a text)
 #
-# The default is for the file to be \code{"~/gmail_private.txt"}.
+# The default is for the file to be \code{"~/.gmail_private"}.
 #
 # @seealso \code{\link{send_gmail}}, \code{\link{send_text}}
 # @keywords utilities
 #
 read_private_info <-
-function(file="gmail_private.txt", dir)
+function(file=".gmail_private", dir)
 {
     # if missing dir, use home directory
     if(missing(dir) || is.null(dir)) dir <- Sys.getenv("HOME")

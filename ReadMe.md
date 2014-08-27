@@ -9,8 +9,8 @@ the work. The only thing the mygmailR package does is handle the
 private information so that I don't have to include my password or
 gmail account in scripts.
 
-The default is to have a file `~/gmail_private.txt` (use `chmod 600`
-to make it not readable by others) containing the following:
+The default is to have a text file `~/.gmail_private` (use `chmod 600`
+or `chmod 400` to make it not readable by others) containing the following:
 
 ```
 password this_is_my_gmail_password
