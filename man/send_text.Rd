@@ -4,14 +4,16 @@
 \title{Send a text to yourself}
 \usage{
 send_text(subject = "", body = "", body_sep = "\\n",
-  file_private = "gmail_private.txt", dir_private = NULL)
+  file_private = ".gmail_private", dir_private = NULL)
 }
 \arguments{
-\item{subject}{Character string with subject for the email}
+\item{subject}{Character string with subject for the email
+(Can't include single-quotes.)}
 
 \item{body}{Character string or vector of character strings, with
 the body of the email; if it's a vector, it's combined with
-\code{collapse=body_sep} (default = \code{"\n"}).}
+\code{collapse=body_sep} (default = \code{"\n"}).
+(Contents can't include single-quotes.)}
 
 \item{body_sep}{Character string for combining elements in the input \code{body}.}
 
