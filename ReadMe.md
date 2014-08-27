@@ -24,6 +24,9 @@ The values (e.g. your password) can't include any spaces or
 double-quotes, I think. The value for `text` should be an email
 address that will send a text to your cell phone.
 
+**Note**: It seems like the subject and body of an email can't include
+single-quotes.
+
 ---
 
 Licensed under the [MIT license](LICENSE). ([More information here](http://en.wikipedia.org/wiki/MIT_License).)
