@@ -1,15 +1,12 @@
 Package: mygmailR
-Version: 0.1-1
-Date: 27 Aug 2014
+Version: 0.1-2
+Date: 28 Aug 2014
 Author: Karl W Broman <kbroman@biostat.wisc.edu>
 Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
 License: MIT + file LICENSE
 Title: Send myself email from R
-VignetteBuilder: knitr
-Depends:
-    gmailR
+Enhances: gmailR
 Suggests:
-    knitr,
     devtools,
     roxygen2
 Description: Handles private gmail information (e.g. password) to send
