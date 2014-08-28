@@ -3,7 +3,7 @@
 \alias{send_text}
 \title{Send a text to yourself}
 \usage{
-send_text(subject = "", body = "", body_sep = "\\n",
+send_text(subject = "", body = "", body_sep = "\\\\n",
   file_private = ".gmail_private", dir_private = NULL)
 }
 \arguments{
@@ -12,8 +12,9 @@ send_text(subject = "", body = "", body_sep = "\\n",
 
 \item{body}{Character string or vector of character strings, with
 the body of the email; if it's a vector, it's combined with
-\code{collapse=body_sep} (default = \code{"\n"}).
-(Contents can't include single-quotes.)}
+\code{collapse=body_sep} (default = \code{"\\n"}).
+(Contents can't include single-quotes, and you need to
+double-backslashed the backslashes.)}
 
 \item{body_sep}{Character string for combining elements in the input \code{body}.}
 

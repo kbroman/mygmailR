@@ -7,8 +7,9 @@
 #'     (Can't include single-quotes.)
 #' @param body Character string or vector of character strings, with
 #'     the body of the email; if it's a vector, it's combined with
-#'     \code{collapse=body_sep} (default = \code{"\n"}).
-#'     (Contents can't include single-quotes.)
+#'     \code{collapse=body_sep} (default = \code{"\\n"}).
+#'     (Contents can't include single-quotes, and you need to
+#'     double-backslashed the backslashes.)
 #' @param body_sep Character string for combining elements in the input \code{body}.
 #' @param file_private Character string with file name containing the private information.
 #' @param dir_private The directory containing \code{file}. If NULL or
@@ -30,7 +31,7 @@
 #' @seealso \code{\link{send_gmail}}
 #' @keywords utilities
 send_text <-
-function(subject="", body="", body_sep="\n",
+function(subject="", body="", body_sep="\\n",
          file_private=".gmail_private", dir_private=NULL)
 {
     library(gmailR)

@@ -3,7 +3,7 @@
 \alias{send_gmail}
 \title{Send an email}
 \usage{
-send_gmail(subject = "", body = "", to, body_sep = "\\n",
+send_gmail(subject = "", body = "", to, body_sep = "\\\\n",
   file_private = ".gmail_private", dir_private = NULL)
 }
 \arguments{
@@ -11,9 +11,10 @@ send_gmail(subject = "", body = "", to, body_sep = "\\n",
 (Can't include single-quotes.)}
 
 \item{body}{Character string or vector of character strings, with
-the body of the email; if it's a vector, it's combined with
-\code{collapse=body_sep} (default = \code{"\n"}).
-(Contents can't include single-quotes.)}
+    the body of the email; if it's a vector, it's combined with
+    \code{collapse=body_sep} (default = \code{"\\n"}).
+    (Contents can't include single-quotes, and you need to
+    double-backslashed the backslashes.)}
 
 \item{to}{Character string with email address of recipient; if
 missing or NULL, send to self (taken from private info)}
