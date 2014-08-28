@@ -41,6 +41,10 @@ function(subject="", body="", to, body_sep="\\n",
     body <- paste(body, collapse=body_sep)
     body <- paste0(body, "   ") # last few characters have been getting cut off
 
+    # check for double or single quotes
+    check4quotes(subject, "subject")
+    check4quotes(body, "body")
+
     gmailR::gmail(to=to, password=private$password, subject=subject, message=body,
                   from=private$gmail, username=private$gmail)
 }
