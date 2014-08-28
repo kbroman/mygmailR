@@ -18,7 +18,7 @@
 #'     if the \code{file} argument includes the directory.
 #'
 #' @export
-#' @return Returns value from \code{\link[gmailr]{gmail}}.
+#' @return Returns value from \code{\link[gmailR]{gmail}}.
 #'
 #' @examples
 #' \dontrun{

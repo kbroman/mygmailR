@@ -24,7 +24,7 @@ the body of the email; if it's a vector, it's combined with
     if the \code{file} argument includes the directory.}
 }
 \value{
-Returns value from \code{\link[gmailr]{gmail}}.
+Returns value from \code{\link[gmailR]{gmail}}.
 }
 \description{
 Send a text to yourself, using google mail info from a private file

@@ -20,7 +20,7 @@
 #' an email address corresponding to texting to your cell phone.
 #'
 #' @export
-#' @return Returns value from \code{\link[gmailr]{gmail}}.
+#' @return Returns value from \code{\link[gmailR]{gmail}}.
 #'
 #' @examples
 #' \dontrun{
