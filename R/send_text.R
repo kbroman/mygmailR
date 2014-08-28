@@ -33,6 +33,8 @@ send_text <-
 function(subject="", body="", body_sep="\n",
          file_private=".gmail_private", dir_private=NULL)
 {
+    library(gmailR)
+
     private <- read_private_info(file_private, dir_private)
     to <- private$text
     if(is.null(to)) stop("private information doesn't contain email for texting")

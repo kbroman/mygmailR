@@ -32,6 +32,8 @@ send_gmail <-
 function(subject="", body="", to, body_sep="\n",
          file_private=".gmail_private", dir_private=NULL)
 {
+    library(gmailR)
+
     private <- read_private_info(file_private, dir_private)
     if(missing(to)) to <- private$gmail
     body <- paste(body, collapse=body_sep)
