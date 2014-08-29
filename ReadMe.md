@@ -27,6 +27,33 @@ address that will send a text to your cell phone.
 **Note**: It seems like the subject and body of an email can't include
 single- or double-quotes
 
+### Installation
+
+To install mygmailR, you first need to install a set of packages from
+[CRAN](http://cran.r-project.org).
+
+    pkgs <- c("devtools", "rJava", "rjson", "RCurl", "XML")
+    for(pkg in pkgs)
+        if(!require(pkg, character.only=TRUE))
+            install.packages(pkg)
+
+(The `if(!require())` checks to see if the package is installed; we
+only install it if it hadn't already been installed.)
+
+Now load the devtools package.
+
+    library(devtools)
+
+Now use `install_github()` to install
+[gmailR](https://github.com/trinker/gmailR) and
+[mygmailR](https://github.com/kbroman/mygmailR).
+
+    install_github("trinker/gmailR")
+    install_github("kbroman/mygmailR")
+
+
+
+
 ---
 
 Licensed under the [MIT license](LICENSE). ([More information here](http://en.wikipedia.org/wiki/MIT_License).)
