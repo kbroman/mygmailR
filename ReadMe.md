@@ -10,13 +10,14 @@ private information so that I don't have to include my password or
 gmail account in scripts.
 
 The default is to have a text file `~/.gmail_private` (use `chmod 600`
-or `chmod 400` to make it not readable by others) containing the following:
+or `chmod 400` to make it not readable by others) containing the
+following:
 
 ```
-password this_is_my_gmail_password
-gmail    my_gmail@gmail.com
+gmail    default_from@gmail.com
+password password_for_default_from
 text     1234567890@text.att.net
-to       default_to@someplace.com [optional]
+to       default_to@someplace.com
 ```
 
 That is, two columns with first column being a key (`password`,
@@ -70,8 +71,8 @@ address that your corresponds to texting to yourself (`text`). You can
 include an optional `to` record.
 
 ```
-password this_is_my_gmail_password
-gmail    my_gmail@gmail.com
+gmail    default_from@gmail.com
+password password_for_default_from
 text     1234567890@text.att.net
 to       default_to@someplace.com
 ```
