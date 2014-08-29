@@ -16,6 +16,7 @@ or `chmod 400` to make it not readable by others) containing the following:
 password this_is_my_gmail_password
 gmail    my_gmail@gmail.com
 text     1234567890@text.att.net
+to       default_to@someplace.com [optional]
 ```
 
 That is, two columns with first column being a key (`password`,
@@ -23,6 +24,9 @@ That is, two columns with first column being a key (`password`,
 The values (e.g. your password) can't include any spaces or
 single- or double-quotes, I think. The value for `text` should be an email
 address that will send a text to your cell phone.
+To `to` record is optional: `gmail` will be used as the
+&ldquo;from&rdquo; account; if `to` is defined, that will be used as
+the default &ldquo;to&rdquo; account.
 
 **Note**: It seems like the subject and body of an email can't include
 single- or double-quotes
@@ -54,19 +58,22 @@ Now use `install_github()` to install
 
 ### Usage
 
-First, you may need to set up an application-specific password for this,
+I set up a separate Google account just for sending emails and texts
+from R. And you may need to set up an application-specific password for this,
 by going to [Google](http://www.google.com) &rarr; Accounts &rarr;
 Security &rarr;
 [App passwords settings](https://security.google.com/settings/security/apppasswords?pli=1).
 
 Create a file in your home directory, `~/.gmail_private` that contains
 your gmail password (`password`), gmail account (`gmail`) and an email
-address that your corresponds to texting to yourself (`text`).
+address that your corresponds to texting to yourself (`text`). You can
+include an optional `to` record.
 
 ```
 password this_is_my_gmail_password
 gmail    my_gmail@gmail.com
 text     1234567890@text.att.net
+to       default_to@someplace.com
 ```
 
 Make this file not readable by others. At the UNIX command line, type
@@ -94,9 +101,12 @@ characters.
                  "Sed maximus ultrices euismod.",
                  "Cras finibus nibh ut sagittis auctor."))
 
-By default, `send_gmail` uses the same &ldquo;from&rdquo; and
-&ldquo;to&rdquo; email address, taken from your `~/.gmail_private`
-file. If you want to send to a different email address, use the `to`
+If your `~/.gmail_private` file contains a `to` record, that will be
+the default email address to send things _to_. If no `to` record is
+defined, the value of `gmail` will be used as both the
+&ldquo;from&rdquo; and &ldquo;to&rdquo; address.
+
+If you want to send to a different email address, use the `to`
 argument.
 
     send_gmail("sent from R",

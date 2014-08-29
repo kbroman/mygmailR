@@ -37,7 +37,13 @@ function(subject="", body="", to, body_sep="\\n",
     library(gmailR)
 
     private <- read_private_info(file_private, dir_private)
-    if(missing(to)) to <- private$gmail
+
+    # if arg 'to' is not provided
+    #     see if private$to is defined; if so, use it
+    #     otherwise send email to private$gmail
+    if(missing(to))
+        to <- ifelse(is.null(private$to), private$gmail, private$to)
+
     body <- paste(body, collapse=body_sep)
     body <- paste0(body, "   ") # last few characters have been getting cut off
 
