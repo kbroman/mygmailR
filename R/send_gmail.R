@@ -22,6 +22,17 @@
 #' @export
 #' @return Returns value from \code{\link[gmailR]{gmail}}.
 #'
+#' @details
+#' Uses gmail address and password information in the
+#' \code{~/.gmail_private} file (or another file, specified with
+#' \code{dir_private} and \code{file_private}. This should contain records
+#' \code{gmail}, \code{password}, and \code{text}, and (optionally) \code{to}.
+#'
+#' Email will be sent from the address defined in the private file as \code{gmail}.
+#' If to is defined in that file, it is used as the default "to" email address;
+#' otherwise, \code{gmail} is used as both the "from" and the "to" addresses.
+#' You can specify a different recipient with the `to` argument to the function.
+#'
 #' @examples
 #' \dontrun{
 #' send_gmail("R message", "R process done")

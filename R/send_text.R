@@ -17,8 +17,14 @@
 #'     if the \code{file} argument includes the directory.
 #'
 #' @details
-#' The private file should contain your gmail address, password, and
-#' an email address corresponding to texting to your cell phone.
+#' Uses gmail address and password information in the
+#' \code{~/.gmail_private} file (or another file, specified with
+#' \code{dir_private} and \code{file_private}. This should contain records
+#' \code{gmail}, \code{password}, and \code{text}, and (optionally) \code{to}.
+#'
+#' An email will be sent from the address defined in the private file as \code{gmail}.
+#' It will be sent to the email address defined as \code{text}. (If AT\&T is your
+#' mobile phone company, this would be an address like \code{1234567890@@txt.att.net}.)
 #'
 #' @export
 #' @return Returns value from \code{\link[gmailR]{gmail}}.
