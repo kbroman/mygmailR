@@ -5,7 +5,7 @@ This is an R package that uses the
 myself emails and texts.
 
 The [gmailR](https://github.com/trinker/gmailR/) package does all of
-the work. The only thing the mygmailR package does is handle the
+the work. The only thing the [mygmailR](https://github.com/kbroman/mygmailR) package does is handle the
 private information so that I don't have to include my password or
 gmail account in scripts.
 
@@ -29,7 +29,8 @@ single- or double-quotes
 
 ### Installation
 
-To install mygmailR, you first need to install a set of packages from
+To install [mygmailR](https://github.com/kbroman/mygmailR), you first
+need to install a set of packages from
 [CRAN](http://cran.r-project.org).
 
     pkgs <- c("devtools", "rJava", "rjson", "RCurl", "XML")
