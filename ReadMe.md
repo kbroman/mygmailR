@@ -35,10 +35,10 @@ need to install a set of packages from
 
     pkgs <- c("devtools", "rJava", "rjson", "RCurl", "XML")
     for(pkg in pkgs)
-        if(!require(pkg, character.only=TRUE))
+        if( !require(pkg, character.only=TRUE) )
             install.packages(pkg)
 
-(The `if(!require())` checks to see if the package is installed; we
+(The `if(!require( ))` checks to see if the package is installed; we
 only install it if it hadn't already been installed.)
 
 Now load the devtools package.
