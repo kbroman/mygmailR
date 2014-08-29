@@ -19,7 +19,7 @@ text     1234567890@text.att.net
 ```
 
 That is, two columns with first column being a key (`password`,
-`gmail`, and `text`) and second column being the corresponding value. 
+`gmail`, and `text`) and second column being the corresponding value.
 The values (e.g. your password) can't include any spaces or
 single- or double-quotes, I think. The value for `text` should be an email
 address that will send a text to your cell phone.
