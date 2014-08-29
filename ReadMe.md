@@ -21,11 +21,11 @@ text     1234567890@text.att.net
 That is, two columns with first column being a key (`password`,
 `gmail`, and `text`) and second column being the corresponding value. 
 The values (e.g. your password) can't include any spaces or
-double-quotes, I think. The value for `text` should be an email
+single- or double-quotes, I think. The value for `text` should be an email
 address that will send a text to your cell phone.
 
 **Note**: It seems like the subject and body of an email can't include
-single-quotes.
+single- or double-quotes
 
 ---
 
