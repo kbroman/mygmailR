@@ -5,7 +5,7 @@ Author: Karl W Broman <kbroman@biostat.wisc.edu>
 Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
 License: MIT + file LICENSE
 Title: Send myself email from R
-Enhances: gmailR
+Depends: gmailR
 Imports: utils
 Suggests:
     devtools,

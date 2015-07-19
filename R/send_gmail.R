@@ -20,6 +20,7 @@
 #'     if the \code{file} argument includes the directory.
 #'
 #' @export
+#' @importFrom gmailR gmail
 #' @return Returns value from \code{\link[gmailR]{gmail}}.
 #'
 #' @details
@@ -45,8 +46,6 @@ send_gmail <-
 function(subject="", body="", to, body_sep="\\n",
          file_private=".gmail_private", dir_private=NULL)
 {
-    library(gmailR)
-
     private <- read_private_info(file_private, dir_private)
 
     # if arg 'to' is not provided
@@ -62,7 +61,6 @@ function(subject="", body="", to, body_sep="\\n",
     check4quotes(subject, "subject")
     check4quotes(body, "body")
 
-    gmailR::gmail(to=to, password=private$password, subject=subject, message=body,
-                  from=private$gmail, username=private$gmail)
+    gmail(to=to, password=private$password, subject=subject, message=body,
+          from=private$gmail, username=private$gmail)
 }
-

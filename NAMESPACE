@@ -2,3 +2,4 @@
 
 export(send_gmail)
 export(send_text)
+importFrom(gmailR,gmail)

@@ -27,6 +27,8 @@
 #' mobile phone company, this would be an address like \code{1234567890@@txt.att.net}.)
 #'
 #' @export
+#' @importFrom gmailR gmail
+#'
 #' @return Returns value from \code{\link[gmailR]{gmail}}.
 #'
 #' @examples
@@ -40,8 +42,6 @@ send_text <-
 function(subject="", body="", body_sep="\\n",
          file_private=".gmail_private", dir_private=NULL)
 {
-    library(gmailR)
-
     private <- read_private_info(file_private, dir_private)
     to <- private$text
     if(is.null(to)) stop("private information doesn't contain email for texting")
@@ -52,7 +52,6 @@ function(subject="", body="", body_sep="\\n",
     check4quotes(subject, "subject")
     check4quotes(body, "body")
 
-    gmailR::gmail(to=to, password=private$password, subject=subject, message=body,
-                  from=private$gmail, username=private$gmail)
+    gmail(to=to, password=private$password, subject=subject, message=body,
+          from=private$gmail, username=private$gmail)
 }
-
