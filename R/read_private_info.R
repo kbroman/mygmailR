@@ -35,7 +35,7 @@ function(file=".gmail_private", dir)
     if(dir != "")
         file <- file.path(path.expand(dir), file)
 
-    info <- read.table(file, header=FALSE, stringsAsFactors=FALSE)
+    info <- utils::read.table(file, header=FALSE, stringsAsFactors=FALSE)
 
     # data should have two columns, key and value
     # expected keys: password, gmail, text (email address to send text)
