@@ -4,7 +4,7 @@
 \alias{send_gmail}
 \title{Send an email}
 \usage{
-send_gmail(subject = "", body = "", to, body_sep = "\\\\n",
+send_gmail(subject = "", body = "", to=NULL, body_sep = "\\\\n",
   file_private = ".gmail_private", dir_private = NULL)
 }
 \arguments{
@@ -18,14 +18,14 @@ send_gmail(subject = "", body = "", to, body_sep = "\\\\n",
     double-backslashed the backslashes.)}
 
 \item{to}{Character string with email address of recipient; if
-missing or NULL, send to self (taken from private info)}
+NULL, send to self (taken from private info)}
 
 \item{body_sep}{Character string for combining elements in the input \code{body}.}
 
 \item{file_private}{Character string with file name containing the private information.}
 
-\item{dir_private}{The directory containing \code{file}. If NULL or
-    missing, we use the user's home directory \code{"~"}. Use \code{""}
+\item{dir_private}{The directory containing \code{file}. If NULL,
+    we use the user's home directory \code{"~"}. Use \code{""}
     if the \code{file} argument includes the directory.}
 }
 \value{
@@ -55,4 +55,3 @@ send_gmail("R message", "R process done", to="someone@somewhere.com")
 \code{\link{send_text}}
 }
 \keyword{utilities}
-

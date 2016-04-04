@@ -12,11 +12,11 @@
 #'     double-backslashed the backslashes.)
 #'
 #' @param to Character string with email address of recipient; if
-#'     missing or NULL, send to self (taken from private info)
+#'     NULL, send to self (taken from private info)
 #' @param body_sep Character string for combining elements in the input \code{body}.
 #' @param file_private Character string with file name containing the private information.
-#' @param dir_private The directory containing \code{file}. If NULL or
-#'     missing, we use the user's home directory \code{"~"}. Use \code{""}
+#' @param dir_private The directory containing \code{file}. If NULL,
+#'     we use the user's home directory \code{"~"}. Use \code{""}
 #'     if the \code{file} argument includes the directory.
 #'
 #' @export
@@ -43,7 +43,7 @@
 #' @seealso \code{\link{send_text}}
 #' @keywords utilities
 send_gmail <-
-function(subject="", body="", to, body_sep="\\n",
+function(subject="", body="", to=NULL, body_sep="\\n",
          file_private=".gmail_private", dir_private=NULL)
 {
     private <- read_private_info(file_private, dir_private)
@@ -51,7 +51,7 @@ function(subject="", body="", to, body_sep="\\n",
     # if arg 'to' is not provided
     #     see if private$to is defined; if so, use it
     #     otherwise send email to private$gmail
-    if(missing(to))
+    if(is.null(to))
         to <- ifelse(is.null(private$to), private$gmail, private$to)
 
     body <- paste(body, collapse=body_sep)

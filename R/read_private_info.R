@@ -4,8 +4,8 @@
 # Read private gmail info (password, gmail, text address) from a file.
 #
 # @param file Character string with file name containing the private information.
-# @param dir The directory containing \code{file}. If NULL or
-# missing, we use the user's home directory \code{"~"}. Use \code{""}
+# @param dir The directory containing \code{file}. If NULL,
+# we use the user's home directory \code{"~"}. Use \code{""}
 # if the \code{file} argument includes the directory.
 #
 # @return list with information from \code{file}
@@ -25,10 +25,10 @@
 # @keywords utilities
 #
 read_private_info <-
-function(file=".gmail_private", dir)
+function(file=".gmail_private", dir=NULL)
 {
     # if missing dir, use home directory
-    if(missing(dir) || is.null(dir)) dir <- Sys.getenv("HOME")
+    if(is.null(dir)) dir <- Sys.getenv("HOME")
 
     # if dir == "", file includes path
     # if dir != "", combine dir and file
