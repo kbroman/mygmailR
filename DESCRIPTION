@@ -1,8 +1,8 @@
 Package: mygmailR
 Version: 0.1-5
 Date: 2016-04-04
-Author: Karl W Broman <kbroman@biostat.wisc.edu>
-Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
+Author: Karl W Broman <broman@wisc.edu>
+Maintainer: Karl W Broman <broman@wisc.edu>
 License: MIT + file LICENSE
 Title: Send myself email from R
 Depends: gmailR
