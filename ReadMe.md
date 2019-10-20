@@ -29,8 +29,11 @@ To `to` record is optional: `gmail` will be used as the
 &ldquo;from&rdquo; account; if `to` is defined, that will be used as
 the default &ldquo;to&rdquo; account.
 
-**Note**: It seems like the subject and body of an email can't include
-single- or double-quotes
+
+**Note**: You may need an [app
+password](https://support.google.com/accounts/answer/185833?p=InvalidSecondFactor)
+for this. Also, it seems like the subject and body of an email can't include
+single- or double-quotes.
 
 ### Installation
 
