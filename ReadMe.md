@@ -63,7 +63,7 @@ Now use `install_github()` to install
 ### Usage
 
 I set up a separate Google account just for sending emails and texts
-from R. And you may need to set up an application-specific password for this,
+from R. And you may need to set up an [application-specific password](https://support.google.com/accounts/answer/185833?p=InvalidSecondFactor&visit_id=637071734541135549-2117603900&rd=1) for this,
 by going to [Google](http://www.google.com) &rarr; Accounts &rarr;
 Security &rarr;
 [App passwords settings](https://security.google.com/settings/security/apppasswords?pli=1).
