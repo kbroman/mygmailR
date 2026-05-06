@@ -41,7 +41,7 @@ To install [mygmailR](https://github.com/kbroman/mygmailR), you first
 need to install a set of packages from
 [CRAN](http://cran.r-project.org).
 
-    pkgs <- c("devtools", "rJava", "rjson", "RCurl", "XML")
+    pkgs <- c("remotes", "rJava", "rjson", "RCurl", "XML")
     for(pkg in pkgs)
         if( !require(pkg, character.only=TRUE) )
             install.packages(pkg)
@@ -49,9 +49,9 @@ need to install a set of packages from
 (The `if(!require( ))` checks to see if the package is installed; we
 only install it if it hadn't already been installed.)
 
-Now load the devtools package.
+Now load the remotes package.
 
-    library(devtools)
+    library(remotes)
 
 Now use `install_github()` to install
 [gmailR](https://github.com/trinker/gmailR) and
